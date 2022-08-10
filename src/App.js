@@ -9,7 +9,7 @@ function App() {
   ]
 
   return (
-    <Home songData={songData} style={{style: ''}} />
+    <Home songData={songData} />
   );
 }
 

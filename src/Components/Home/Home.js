@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 
 const Home = (props) => (
-  <span>
+  <span style={props.customStyle}>
     {props.songData.map((value, idx) => (
       <p key={idx}>
         {value.artist} - {value.title}
@@ -13,8 +13,9 @@ const Home = (props) => (
 );
 
 Home.propTypes = { songData: PropTypes.array,
-style: PropTypes.object };
+customStyle: PropTypes.object };
 
-Home.defaultProps = {songData: [{id: 0, title: 'Trys Milijonai', artist: 'Marijonas Mikutavičius'}]};
+Home.defaultProps = {songData: [{id: 0, title: 'Trys Milijonai', artist: 'Marijonas Mikutavičius'}],
+customStyle: {color: 'grey'}};
 
 export default Home;
