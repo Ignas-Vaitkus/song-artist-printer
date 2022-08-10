@@ -1,4 +1,4 @@
-import Home from "./Components/Home/Home";
+import Song from "./Components/Song/Song";
 
 
 function App() {
@@ -9,7 +9,9 @@ function App() {
   ]
 
   return (
-    <Home songData={songData} />
+    songData.map(element => {
+      return <Song songData={element} />
+    })
   );
 }
 
