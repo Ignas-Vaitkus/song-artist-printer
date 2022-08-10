@@ -9,9 +9,11 @@ function App() {
   ]
 
   return (
-    songData.map(element => {
-      return <Song songData={element} />
-    })
+    <>
+      {songData.map(element => {
+        return <Song key={element.id} songData={element} />
+      })}
+    </>
   );
 }
 

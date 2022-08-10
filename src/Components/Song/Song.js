@@ -5,11 +5,11 @@ import PropTypes from 'prop-types';
 const Song = (props) => {
   const {id, artist, title} = props.songData;
 
-  return (<p style={props.customStyle}>
-    <p key={id}>
+  return (
+    <p style={props.customStyle}>
       {artist} - {title}
     </p>
-  </p>);
+  );
 };
 
 Song.propTypes = { songData: PropTypes.object,
